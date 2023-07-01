@@ -10,6 +10,20 @@ const Navbar = () => {
     {
       label: "Home",
       link: "/",
+      sublinks: [
+        {
+          label: "About Us",
+          link: "/about-us",
+        },
+        {
+          label: "Meet our team",
+          link: "/meet-our-team",
+        },
+        {
+          label: "Terms and Conditions",
+          link: "/terms-and-conditions",
+        },
+      ],
     },
     {
       label: "Contests",
@@ -21,7 +35,16 @@ const Navbar = () => {
     },
     {
       label: "Shop",
-      link: "/contests",
+      sublinks: [
+        {
+          label: "Bookstore",
+          link: "/bookstore",
+        },
+        {
+          label: "Decor",
+          link: "/decor",
+        },
+      ],
     },
     {
       label: "Creative Hub",
@@ -56,21 +79,38 @@ const Navbar = () => {
               className="pb-[30px] cursor-pointer"
               onClick={() => push("/")}
             />
-            <div className="flex items-center xl:space-x-5">
-              <div>
+            <div className="flex items-center xl:space-x-5 relative">
+              <div className="flex items-center">
                 {links.map((link) => (
-                  <a
-                    href={link.link}
-                    className={`px-4 py-2 whitespace-nowrap ${
-                      pathname === link.link ? "text-black" : "text-wd-green"
-                    }  hover:text-wd-light-green hover:opacity-80`}
-                    key={link.label}
-                    style={{
-                      transition: "color 0.4s ease",
-                    }}
-                  >
-                    {link.label}
-                  </a>
+                  <div key={link.label} className="group relative">
+                    <a
+                      href={link.link ? link.link : "#"}
+                      className={`px-4 py-2 whitespace-nowrap ${
+                        pathname === link.link ? "text-black" : "text-wd-green"
+                      }  hover:text-wd-light-green hover:opacity-80`}
+                      style={{
+                        transition: "color 0.4s ease",
+                      }}
+                    >
+                      {link.label}
+                    </a>
+                    <div className="hidden group-hover:flex absolute pt-3">
+                      <div className="bg-white shadow-lg rounded-lg z-30">
+                        {link.sublinks?.map((sublink) => (
+                          <a
+                            key={sublink.label}
+                            href={sublink.link}
+                            className="block px-4 py-2 whitespace-nowrap text-black hover:text-wd-green hover:opacity-80"
+                            style={{
+                              transition: "color 0.4s ease",
+                            }}
+                          >
+                            {sublink.label}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
               <div className="flex items-center space-x-3 lg:space-x-10">
