@@ -36,3 +36,18 @@ bpdy {
   align-items: center;
   justify-content: center;
 }
+
+.bookmark::before {
+  content: "";
+  width: 1540px;
+}
+
+.bookmark::after {
+  position: absolute;
+  right: -135px;
+  content: "";
+  border-top: 172.5px solid transparent; /* Adjust the flag dimensions */
+  border-left: 135px solid #fff; /* Adjust the flag dimensions and color */
+  border-bottom: 172.5px solid transparent; /* Adjust the flag dimensions */
+  opacity: 0.68;
+}
