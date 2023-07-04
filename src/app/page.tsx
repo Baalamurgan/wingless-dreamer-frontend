@@ -1,5 +1,6 @@
 import Bestsellers from "@/components/LandingPage/Bestsellers";
 import ComingEvent from "@/components/LandingPage/ComingEvent";
+import CreativeHub from "@/components/LandingPage/CreativeHub";
 import Empowering from "@/components/LandingPage/Empowering";
 import InfoCards from "@/components/LandingPage/InfoCards";
 
@@ -18,6 +19,9 @@ export default function Home() {
         </div>
         <div className="mt-40">
           <ComingEvent />
+        </div>
+        <div className="mt-40">
+          <CreativeHub />
         </div>
       </div>
     </main>
