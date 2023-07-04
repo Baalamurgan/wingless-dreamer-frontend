@@ -1,5 +1,6 @@
 import Empowering from "@/components/LandingPage/Empowering";
 import Bestsellers from "@/components/LandingPage/Bestsellers";
+import InfoCards from "@/components/LandingPage/InfoCards";
 
 export default function Home() {
   return (
@@ -8,6 +9,9 @@ export default function Home() {
         <Empowering />
         <div className="mt-40">
           <Bestsellers />
+        </div>
+        <div className="mt-40">
+          <InfoCards />
         </div>
       </div>
     </main>
