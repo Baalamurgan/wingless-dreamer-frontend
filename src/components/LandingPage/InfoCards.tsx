@@ -29,7 +29,7 @@ const InfoCards = () => {
     },
   ];
   return (
-    <div className="bg-wd-green p-20 flex flex-col md:flex-row items-center md:items-start justify-center space-y-5 space-x-0 md:space-x-5 md:space-y-0">
+    <div className="bg-wd-green p-5 md:p-10 xl:p-20 flex flex-col md:flex-row items-center md:items-start justify-center space-y-5 space-x-0 md:space-x-5 md:space-y-0">
       {infoLinks.map((info) => (
         <div className="relative rounded-t-full" key={info.link}>
           <div className="">

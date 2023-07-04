@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Inter } from "next/font/google";
 import Head from "next/head";
@@ -71,6 +72,7 @@ export default function RootLayout({
         </header>
         <div className="relative h-[calc(100vh-75px)] xl:h-[calc(100vh - 110px)]">
           {children}
+          <Footer />
         </div>
       </body>
     </html>

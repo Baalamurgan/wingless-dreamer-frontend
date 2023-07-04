@@ -9,11 +9,11 @@ const CreativeHub = () => {
           height={763}
           width={316}
           alt="the_misty_cauldron"
-          className="w-full"
+          className="w-full h-full object-cover"
         />
       </div>
-      <div className=" bg-wd-green text-white flex flex-col items-center justify-center py-20 px-10 w-full max-w-[500px]">
-        <p className="text-[47px]">Creative Hub</p>
+      <div className="bg-wd-green text-white flex flex-col items-center justify-center py-20 px-4 md:px-10 w-full max-w-[400px] md:max-w-[500px]">
+        <p className="text-[47px] text-center">Creative Hub</p>
         <div className="mt-10">
           <p className="text-[22px] text-center">
             In the poet&apos;s heart, a story is caressingly told,
@@ -40,7 +40,7 @@ const CreativeHub = () => {
           height={763}
           width={316}
           alt="the_misty_cauldron"
-          className="w-full"
+          className="w-full h-full object-cover"
         />
       </div>
     </div>
