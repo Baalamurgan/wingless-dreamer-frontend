@@ -16,7 +16,7 @@ const Bestsellers = () => {
   ];
   return (
     <div className="bg-[#799299] px-20 py-5 flex flex-col items-center">
-      <h1 className="text-[#DBDBDB] text-[24px] font-bold">
+      <h1 className="text-[#DBDBDB] text-2xl font-bold">
         Wingless Dreamer Publisher
       </h1>
       <p className="text-[47px] font-bold text-white">BESTSELLERS</p>
