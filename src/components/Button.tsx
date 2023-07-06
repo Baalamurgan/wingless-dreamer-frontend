@@ -7,7 +7,6 @@ const Button = ({
   style = {
     backgroundColor: "white",
     color: "black",
-    border: "1px solid black",
     borderRadius: "4px",
     padding: "8px 16px",
     cursor: "pointer",
@@ -22,6 +21,7 @@ const Button = ({
     color: hoverColor,
     border: hoverBorder,
   },
+  borderColor,
   disabledStyle = {
     backgroundColor: "gray",
     color: "white",
@@ -31,13 +31,14 @@ const Button = ({
   loadingStyle = {
     backgroundColor: "white",
     color: "black",
-    border: "1px solid black",
+    border: borderColor ? `1px solid ${borderColor}` : "1px solid black",
     cursor: "wait",
   },
   loadingText = "Loading...",
+  className,
   ...props
 }: {
-  onClick: () => void;
+  onClick?: () => void;
   children: React.ReactNode;
   style?: React.CSSProperties;
   disabled?: boolean;
@@ -51,14 +52,16 @@ const Button = ({
   disabledStyle?: React.CSSProperties;
   loadingStyle?: React.CSSProperties;
   loadingText?: string;
+  className?: string;
   [key: string]: any;
 }) => {
   return (
     <button
-      className="px-3 py-2"
-      onClick={onClick}
+      className={`px-3 py-2 ${className || ""}`}
+      onClick={onClick ? onClick : () => {}}
       style={{
         ...style,
+        ...(borderColor && { borderColor }),
         ...(disabled && disabledStyle),
         ...(loading && loadingStyle),
       }}
