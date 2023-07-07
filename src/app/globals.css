@@ -27,14 +27,12 @@
     url("/assets/fonts/georgia/Georgia.ttf") format("ttf");
 }
 
-bpdy {
-  height: 100vh;
-  width: 100vw;
-  overflow: auto;
-  display: flex;
-  /* flex-direction: column; */
-  align-items: center;
-  justify-content: center;
+@font-face {
+  font-family: "para display";
+  src: url("/assets/fonts/paradisplay.woff2") format("woff2"),
+    url("/assets/fonts/paradisplay.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
 }
 
 .bookmark::before {
@@ -50,4 +48,9 @@ bpdy {
   border-left: 135px solid #fff; /* Adjust the flag dimensions and color */
   border-bottom: 172.5px solid transparent; /* Adjust the flag dimensions */
   opacity: 0.68;
+}
+
+.playfair {
+  font-family: "Playfair Display", serif;
+  -webkit-font-smoothing: antialiased;
 }

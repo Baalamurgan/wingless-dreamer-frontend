@@ -52,7 +52,7 @@ const Navbar = () => {
     },
     {
       label: "Contact Us",
-      link: "/contests",
+      link: "/contact",
     },
     {
       label: "FAQ",

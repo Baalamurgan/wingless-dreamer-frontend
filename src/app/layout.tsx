@@ -50,6 +50,16 @@ export default function RootLayout({
           content="What's your story today? We welcome the world changers to our creative community wholeheartedly to get their dreams inked. Unleash the magic. Let's Read. Write. Achieve."
         />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <body className={inter.className}>
         <div>
@@ -62,9 +72,7 @@ export default function RootLayout({
                 width: "100%",
                 position: "fixed",
               }}
-            >
-              abcd
-            </div>
+            />
           </div>
         </div>
         <header className="relative">
