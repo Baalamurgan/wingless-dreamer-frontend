@@ -53,4 +53,13 @@
 .playfair {
   font-family: "Playfair Display", serif;
   -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.05em;
+}
+
+p {
+  font-family: "futura";
+  src: url("/assets/fonts/futura.woff") format("woff"),
+    url("/assets/fonts/futura.woff") format("woff");
+  -webkit-font-smoothing: antialiased;
+  line-height: normal;
 }
