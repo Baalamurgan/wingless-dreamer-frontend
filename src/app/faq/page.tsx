@@ -190,7 +190,7 @@ const Faq = () => {
     },
   ];
   const [selectedTab, setSelectedTab] = useState("settingupFAQs");
-  const [show, setShow] = useState(0);
+  const [show, setShow] = useState<number | null>(0);
 
   return (
     <div className="flex flex-col items-center bg-white">
@@ -225,7 +225,10 @@ const Faq = () => {
             {selectedTab === "settingupFAQs" ? (
               <div>
                 {settingupFAQs.map((faq, i) => (
-                  <div key={i} onClick={() => setShow(i)}>
+                  <div
+                    key={i}
+                    onClick={() => (show === i ? setShow(null) : setShow(i))}
+                  >
                     <FAQCard faq={faq} show={show === i} />
                   </div>
                 ))}
@@ -233,7 +236,10 @@ const Faq = () => {
             ) : selectedTab === "generalFAQs" ? (
               <div>
                 {generalFAQs.map((faq, i) => (
-                  <div key={i} onClick={() => setShow(i)}>
+                  <div
+                    key={i}
+                    onClick={() => (show === i ? setShow(null) : setShow(i))}
+                  >
                     <FAQCard faq={faq} show={show === i} />
                   </div>
                 ))}
