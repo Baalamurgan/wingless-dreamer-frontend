@@ -56,7 +56,7 @@ const Navbar = () => {
     },
     {
       label: "FAQ",
-      link: "/contests",
+      link: "/faq",
     },
   ];
   const { width, height } = useWindowSize();
