@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Georgia font */
 @font-face {
   font-family: "system-ui";
   src: url("/assets/fonts/georgia/Georgia-Italic.ttf") format("ttf"),
@@ -65,4 +64,10 @@ p {
 }
 
 .helvetica {
+}
+
+p.sacramento {
+  font-family: "Sacramento", cursive;
+  -webkit-font-smoothing: antialiased;
+  /* line-height: normal; */
 }

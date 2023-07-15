@@ -48,7 +48,7 @@ const Navbar = () => {
     },
     {
       label: "Creative Hub",
-      link: "/contests",
+      link: "/creative-hub",
     },
     {
       label: "Contact Us",
@@ -113,15 +113,15 @@ const Navbar = () => {
                   </div>
                 ))}
               </div>
-              <div className="flex items-center space-x-3 lg:space-x-10">
-                {/* <div><SearchBar /></div> */}
+              {/* <div><SearchBar /></div> */}
+              {/* <div className="flex items-center space-x-3 lg:space-x-10">
                 <div className="group hover:cursor-pointer flex items-center space-x-1">
                   <LiaUserCircle className="h-8 w-8 group-hover:text-wd-green" />
                   <p className="text-[#799299] group-hover:text-wd-green whitespace-nowrap">
                     Log In
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
